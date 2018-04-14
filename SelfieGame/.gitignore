@@ -17,6 +17,7 @@ ExportedObj/
 *.suo
 *.tmp
 *.user
+*.UnityLockfile
 *.userprefs
 *.pidb
 *.booproj
