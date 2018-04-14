@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour {
         public AudioSource a_Source;
         public AudioClip a_clip;
         public bool playing;
-
+        public float startAtSeconds;
         public void PlayEffect()
         {
             a_Source.PlayOneShot(a_clip);
@@ -18,4 +18,11 @@ public class AudioManager : MonoBehaviour {
     }
 
     public List<AudioEffect> audioEffects;
+    public void Start()
+    {
+        foreach(AudioEffect sound in audioEffects)
+        {
+            sound.PlayEffect();
+        }
+    }
 }
