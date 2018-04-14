@@ -75,7 +75,7 @@ public class SelfieEvaluator : MonoBehaviour {
             }
         }
 
-        float area = AABB.x * AABB.y;// Mathf.Sqrt(Mathf.Pow(AABB.x, 2) + Mathf.Pow(AABB.y, 2));
+        float area = AABB.x * AABB.y;
         return area;
     }
 
@@ -99,7 +99,6 @@ public class SelfieEvaluator : MonoBehaviour {
             }
         }
         selfieEvaluation = ((float)succesfullPoints/ (float)pointCount) * areaFilledmodifier;
-        Debug.Log("Selfie Accuracy " + selfieEvaluation + "points hit: " + (float)succesfullPoints + "points count: " + pointCount + "screen filled: " + areaFilledmodifier +","+ featureboundingArea);
     }
 
     bool IsWithinScreen(Vector3 screenPoint)
