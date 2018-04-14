@@ -12,7 +12,8 @@ public class HeadPointCam : MonoBehaviour {
 	void Update () {
         toCam = Camera.main.transform.position - transform.position;
         
-        transform.LookAt( Camera.main.transform);
+        transform.LookAt( Camera.main.transform );
+        transform.rotation *= Quaternion.Euler(0, 0, -90);
 	}
 
 }
