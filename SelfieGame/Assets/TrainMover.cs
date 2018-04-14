@@ -7,7 +7,7 @@ public class TrainMover : MonoBehaviour {
     public float timeToPlayer = 3f;
 	// Use this for initialization
 	void Start () {
-        transform.position = new Vector3(0-(timeToPlayer * trainSpeed),0);
+        transform.position = new Vector3(transform.position.x, transform.position.y,-(timeToPlayer * trainSpeed));
 	}
 	
 	// Update is called once per frame
