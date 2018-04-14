@@ -23,19 +23,23 @@ public class UpperArmMovement : MonoBehaviour {
 
         if (Input.GetKeyDown(yRightRotationActivationKey))
         {
-            body.AddTorque((transform.up) * forceAmount, ForceMode.Impulse);
+            body.AddTorque((transform.right) * forceAmount, ForceMode.Impulse);
+            //body.AddTorque((transform.up) * forceAmount, ForceMode.Impulse);
         }
         if (Input.GetKeyDown(yLeftRotationActivationKey))
         {
-            body.AddTorque((-transform.up) * forceAmount, ForceMode.Impulse);
+            body.AddTorque((-transform.right) * forceAmount, ForceMode.Impulse);
+            //body.AddTorque((-transform.up) * forceAmount, ForceMode.Impulse);
         }
         if (Input.GetKeyDown(xUpRotationActivationKey))
         {
-            body.AddTorque((-transform.right) * forceAmount, ForceMode.Impulse);
+            body.AddTorque((-transform.up) * forceAmount, ForceMode.Impulse);
+            //body.AddTorque((-transform.right) * forceAmount, ForceMode.Impulse);
         }
         if (Input.GetKeyDown(xDownRotationActivationKey))
         {
-            body.AddTorque((transform.right) * forceAmount, ForceMode.Impulse);
+            body.AddTorque((transform.up) * forceAmount, ForceMode.Impulse);
+            //body.AddTorque((transform.right) * forceAmount, ForceMode.Impulse);
         }
         body.AddForce(new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f)), ForceMode.Impulse);
     }

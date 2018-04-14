@@ -5,12 +5,8 @@ using UnityEngine;
 
 public class HeadPointCam : MonoBehaviour {
     Vector3 toCam;
-    public ParticleSystem par;
 
     // Use this for initialization
-    void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -18,8 +14,5 @@ public class HeadPointCam : MonoBehaviour {
         
         transform.LookAt( Camera.main.transform);
 	}
-    void playParticle()
-    {
-        par.Play();
-    }
+
 }

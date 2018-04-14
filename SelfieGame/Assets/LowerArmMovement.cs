@@ -38,11 +38,13 @@ public class LowerArmMovement : MonoBehaviour {
         }
         if (Input.GetKeyDown(xUpRotationActivationKey))
         {
-            body.AddTorque((-parentTrans.right) * forceAmount, ForceMode.Impulse);
+            body.AddTorque((-parentTrans.up) * forceAmount, ForceMode.Impulse);
+            //body.AddTorque((-parentTrans.right) * forceAmount, ForceMode.Impulse);
         }
         if (Input.GetKeyDown(xDownRotationActivationKey))
         {
-            body.AddTorque((parentTrans.right) * forceAmount, ForceMode.Impulse);
+            body.AddTorque((parentTrans.up) * forceAmount, ForceMode.Impulse);
+            //body.AddTorque((parentTrans.right) * forceAmount, ForceMode.Impulse);
         }
         body.AddForce(new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f)),ForceMode.Impulse);
     }
