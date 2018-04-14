@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class HeadPointCam : MonoBehaviour {
     Vector3 toCam;
-	// Use this for initialization
-	void Start () {
+    public ParticleSystem par;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -15,4 +18,8 @@ public class HeadPointCam : MonoBehaviour {
         
         transform.LookAt( Camera.main.transform);
 	}
+    void playParticle()
+    {
+        par.Play();
+    }
 }
