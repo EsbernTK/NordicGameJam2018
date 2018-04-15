@@ -76,6 +76,8 @@ public class SelfieEvaluator : MonoBehaviour {
         return area;
     }
 
+    public GameManagerScoreKeeper gmsk;
+
     void EvaluateSelfie()
     {
         succesfullPoints = 0;
@@ -112,7 +114,7 @@ public class SelfieEvaluator : MonoBehaviour {
         //
         //    }
             endSelfieInterface.transform.gameObject.SetActive(true);
-            followers.text = "You've Gotten, " + selfieEvaluation * 100000 + " Followers!";
+            followers.text = "Congratulations! \n You've Gotten, " + gmsk.score + " Followers!";
             timerCounter += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         //}
