@@ -38,7 +38,7 @@ public class GameManagerScoreKeeper : MonoBehaviour {
         }
 		if(Time.time >= trainTime && !evaluator.takingSelfie)
         {
-            audioManager.audioEffects[3].PlayEffect();
+            audioManager.audioEffects[2].PlayEffect();
             score = 100000;
             Debug.Log("DEAD");
         }
@@ -64,5 +64,10 @@ public class GameManagerScoreKeeper : MonoBehaviour {
 
         yield return new WaitForSeconds(0.01f);
         score = calculateScore();
+    }
+    public void OnRenderImage(RenderTexture source, RenderTexture destination)
+    {
+        if(evaluator.takingSelfie)
+            Graphics.Blit(evaluator.r_selfie, destination);
     }
 }
