@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour {
         public float startAtSeconds;
         public void PlayEffect()
         {
+            playing = true;
             a_Source.PlayOneShot(a_clip);
         }
     }
@@ -22,16 +23,16 @@ public class AudioManager : MonoBehaviour {
     {
         foreach(AudioEffect sound in audioEffects)
         {
-            
-            sound.PlayEffect();
+            if(sound.startAtSeconds == 0f)
+                sound.PlayEffect();
         }
     }
     public void Update()
     {
         foreach (AudioEffect sound in audioEffects)
         {
-
-            sound.PlayEffect();
+            if(!sound.playing && sound.startAtSeconds <= Time.time)
+                sound.PlayEffect();
         }
     }
 }
