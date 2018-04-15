@@ -16,6 +16,7 @@ public class GameManagerScoreKeeper : MonoBehaviour {
     float timer = 0f;
     bool takingSelfie = false;
     public UIManager uIManager;
+    bool dead;
 	// Use this for initialization
 	void Start () {
         trainTime = train.GetComponent<TrainMover>().timeToPlayer;
@@ -36,10 +37,12 @@ public class GameManagerScoreKeeper : MonoBehaviour {
             StartCoroutine(takeSelfie());
             
         }
-		if(Time.time >= trainTime && !evaluator.takingSelfie)
+		if(Time.time >= trainTime && !evaluator.takingSelfie && !dead)
         {
-            audioManager.audioEffects[2].PlayEffect();
+            if(!dead)
+                audioManager.audioEffects[2].PlayEffect();
             score = 100000;
+            dead = true;
             Debug.Log("DEAD");
         }
 	}
@@ -64,10 +67,5 @@ public class GameManagerScoreKeeper : MonoBehaviour {
 
         yield return new WaitForSeconds(0.01f);
         score = calculateScore();
-    }
-    public void OnRenderImage(RenderTexture source, RenderTexture destination)
-    {
-        if(evaluator.takingSelfie)
-            Graphics.Blit(evaluator.r_selfie, destination);
     }
 }
