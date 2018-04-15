@@ -11,7 +11,7 @@ public class SelfieEvaluator : MonoBehaviour {
 
     public List<Transform> t_features;
     public Camera cam;
-    bool takingSelfie = false;
+    public bool takingSelfie = false;
     public Material outputmaterial;
 	void Start () {
         cam = Camera.main;
@@ -24,11 +24,7 @@ public class SelfieEvaluator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Debug.Log("Taking Selfie");
-            takingSelfie = true;
-        }
+        
 	}
 
     bool displaySelfie = false;
