@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class SelfieEvaluator : MonoBehaviour {
 
@@ -95,6 +96,27 @@ public class SelfieEvaluator : MonoBehaviour {
             }
         }
         selfieEvaluation = ((float)succesfullPoints/ (float)pointCount) * areaFilledmodifier;
+
+        StartCoroutine(ShowEndInterface());
+    }
+
+    public Canvas endSelfieInterface;
+    public Text followers;
+    float timerCounter;
+    IEnumerator ShowEndInterface()
+    {
+        //while (true)
+        //{
+        //    if(timerCounter < 3)
+        //    {
+        //
+        //    }
+            endSelfieInterface.transform.gameObject.SetActive(true);
+            followers.text = "You've Gotten, " + selfieEvaluation * 100000 + " Followers!";
+            timerCounter += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        //}
+        
     }
 
     bool IsWithinScreen(Vector3 screenPoint)
