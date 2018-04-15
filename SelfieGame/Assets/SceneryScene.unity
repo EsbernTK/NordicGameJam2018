@@ -16489,7 +16489,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68e5437d8b887949b9d90b69e3e5ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 874089237}
+  Player: {fileID: 1465687907}
+  upperArm: {fileID: 1465687917}
+  lowerArm: {fileID: 1465687913}
   train: {fileID: 1294777621}
   score: 0
   evaluator: {fileID: 1113580511}
