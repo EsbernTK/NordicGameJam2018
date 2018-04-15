@@ -14872,7 +14872,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4318753007821078, guid: 4fe923253aa307644b0ef245fe1ea72c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4.65
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4318753007821078, guid: 4fe923253aa307644b0ef245fe1ea72c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -15052,7 +15052,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.019162573, y: 0, z: 0.00000000622458}
+  m_ConnectedAnchor: {x: -0.019162573, y: 0, z: -2.9467806e-10}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -15143,7 +15143,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0.0010645231, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.004177871, y: 0.009895012, z: 0.0007890314}
+  m_ConnectedAnchor: {x: -0.004177871, y: 0.009895012, z: 0.00078902673}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:

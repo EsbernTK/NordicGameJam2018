@@ -127,11 +127,15 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 830
-  m_MinSize: {x: 885, y: 342}
-  m_MaxSize: {x: 16010, y: 8042}
+  m_MinSize: {x: 887, y: 342}
+  m_MaxSize: {x: 16012, y: 8042}
   vertical: 0
+<<<<<<< HEAD
+  controlID: 59
+=======
   controlID: 107
 >>>>>>> a0b962357a54bab5d621c35ddb2eb342595e4007
+>>>>>>> origin/master
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,8 +164,12 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 342}
   m_MaxSize: {x: 12010, y: 8042}
   vertical: 1
+<<<<<<< HEAD
+  controlID: 60
+=======
   controlID: 108
 >>>>>>> a0b962357a54bab5d621c35ddb2eb342595e4007
+>>>>>>> origin/master
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,8 +203,12 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 221}
   m_MaxSize: {x: 12010, y: 4021}
   vertical: 0
+<<<<<<< HEAD
+  controlID: 61
+=======
   controlID: 12
 >>>>>>> a0b962357a54bab5d621c35ddb2eb342595e4007
+>>>>>>> origin/master
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,8 +237,8 @@ MonoBehaviour:
 =======
     width: 301
     height: 471
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -258,8 +270,8 @@ MonoBehaviour:
 =======
     width: 519
     height: 471
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
 >>>>>>> a0b962357a54bab5d621c35ddb2eb342595e4007
   m_Panes:
@@ -341,8 +353,8 @@ MonoBehaviour:
     y: 0
     width: 416
     height: 830
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -457,6 +469,12 @@ MonoBehaviour:
   m_TreeViewState:
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 02320000
+    m_LastClickedID: 12802
+    m_ExpandedIDs: 38f2ffff50f2ffff68f2ffffa8f2ffff1cf7ffffc8faffff0000000002320000083200000a3200000c320000
+=======
+<<<<<<< HEAD
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 9efbffff00000000e02c0000fc2c00000c2d0000
@@ -466,6 +484,7 @@ MonoBehaviour:
     m_LastClickedID: -2074
     m_ExpandedIDs: 06f3ffff1ef3ffff36f3ffff76f3ffffeaf7ffff96fbffff000000007a310000803100008231000084310000
 >>>>>>> a0b962357a54bab5d621c35ddb2eb342595e4007
+>>>>>>> origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -621,6 +640,13 @@ MonoBehaviour:
     m_SearchArea: 0
     m_Folders:
 <<<<<<< HEAD
+    - Assets
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets
+=======
+<<<<<<< HEAD
     - Assets/PostProcessing
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -633,6 +659,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Sound
 >>>>>>> a0b962357a54bab5d621c35ddb2eb342595e4007
+>>>>>>> origin/master
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Mathias\Documents\Galaxy Shooter\Galaxy SHooter 1\Assets\NordicGameJam2018\SelfieGame
   m_IsLocked: 0
@@ -644,10 +671,16 @@ MonoBehaviour:
     m_ExpandedIDs: 0000000050280000bc2800007c2a000000ca9a3bffffff7f
 =======
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+    m_SelectedIDs: da280000
+    m_LastClickedID: 10458
+    m_ExpandedIDs: 00000000da28000046290000082b000000ca9a3bffffff7f
+=======
     m_SelectedIDs: e8290000
     m_LastClickedID: 10728
     m_ExpandedIDs: 000000005e280000ca280000822a000000ca9a3bffffff7f
 >>>>>>> a0b962357a54bab5d621c35ddb2eb342595e4007
+>>>>>>> origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -676,10 +709,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+    m_ExpandedIDs: 00000000da28000046290000082b0000
+=======
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000050280000bc2800007c2a0000
 =======
     m_ExpandedIDs: 000000005e280000ca280000822a0000
 >>>>>>> a0b962357a54bab5d621c35ddb2eb342595e4007
+>>>>>>> origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -705,12 +742,17 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
 <<<<<<< HEAD
+    m_SelectedInstanceIDs: 86070000
+    m_LastClickedInstanceID: 1926
+=======
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
 =======
     m_SelectedInstanceIDs: 9e2f0000
     m_LastClickedInstanceID: 12190
+>>>>>>> origin/master
     m_HadKeyboardFocusLastEvent: 1
 >>>>>>> a0b962357a54bab5d621c35ddb2eb342595e4007
     m_ExpandedInstanceIDs: 00000000
@@ -737,7 +779,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 3}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 110
 --- !u!114 &16
