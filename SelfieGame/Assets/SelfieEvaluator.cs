@@ -122,7 +122,9 @@ public class SelfieEvaluator : MonoBehaviour {
             endSelfieInterface.transform.gameObject.SetActive(true);
             followers.text = "Congratulations! \n You've Gotten, " + gmsk.score + " Followers!";
             timerCounter += Time.deltaTime;
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(3f);
+        gmsk.uIManager.DisplayEndImage(!gmsk.dead);
+
         //}
         
     }

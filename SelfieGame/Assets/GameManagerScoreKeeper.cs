@@ -16,7 +16,7 @@ public class GameManagerScoreKeeper : MonoBehaviour {
     float timer = 0f;
     bool takingSelfie = false;
     public UIManager uIManager;
-    bool dead;
+    public bool dead;
 	// Use this for initialization
 	void Start () {
         trainTime = train.GetComponent<TrainMover>().timeToPlayer;

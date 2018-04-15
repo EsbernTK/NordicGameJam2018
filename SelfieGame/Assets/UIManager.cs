@@ -8,8 +8,11 @@ public class UIManager : MonoBehaviour {
     public GameObject titlescreen;
     public GameObject TakePicture;
     public int followers;
-    public Text followerText; 
+    public Text followerText;
 
+
+    public Transform aliveImage;
+    public Transform deadImage;
 
     public void updateFollowers()
     {
@@ -31,6 +34,18 @@ public class UIManager : MonoBehaviour {
         titlescreen.SetActive(false);
         followerText.text = "Followers: ";
         TakePicture.SetActive(false);
+    }
+
+    public void DisplayEndImage(bool alive)
+    {
+        if (alive)
+        {
+            aliveImage.gameObject.SetActive(true);
+        }
+        else
+        {
+            deadImage.gameObject.SetActive(true);
+        }
     }
 
 
