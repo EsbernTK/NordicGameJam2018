@@ -44,7 +44,7 @@ public class UpperArmMovement : MonoBehaviour {
                 body.AddTorque((transform.up) * forceAmount, ForceMode.Impulse);
                 //body.AddTorque((transform.right) * forceAmount, ForceMode.Impulse);
             }
-            body.AddForce(new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f)), ForceMode.Impulse);
+            body.AddForce(new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f)), ForceMode.Impulse);
         }
         if (freeze)
         {

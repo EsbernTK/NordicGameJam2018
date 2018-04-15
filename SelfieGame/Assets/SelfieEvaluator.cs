@@ -10,7 +10,7 @@ public class SelfieEvaluator : MonoBehaviour {
 
     public List<Transform> t_features;
     public Camera cam;
-    bool takingSelfie = false;
+    public bool takingSelfie = false;
     public Material outputmaterial;
 	void Start () {
         cam = Camera.main;
