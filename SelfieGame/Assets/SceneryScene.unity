@@ -10537,6 +10537,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d8760d4504814540ba00eaa1d1f43ac, type: 3}
   m_IsPrefabParent: 0
+--- !u!114 &1078603505 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114948482480858844, guid: 09e4cbc83376d0544b29f9f9873ce479,
+    type: 2}
+  m_PrefabInternal: {fileID: 687250425}
+  m_Script: {fileID: 11500000, guid: 8fbb87b54e1288747b7a8b4c2318689f, type: 3}
 --- !u!1001 &1081305937
 Prefab:
   m_ObjectHideFlags: 0
@@ -10841,12 +10847,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 6245d684b339cf342af8419641075cc4, type: 3}
   m_PrefabInternal: {fileID: 865518849}
---- !u!114 &1113580511 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114948482480858844, guid: 09e4cbc83376d0544b29f9f9873ce479,
-    type: 2}
-  m_PrefabInternal: {fileID: 196943473}
-  m_Script: {fileID: 11500000, guid: 8fbb87b54e1288747b7a8b4c2318689f, type: 3}
 --- !u!4 &1116790800 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 6245d684b339cf342af8419641075cc4, type: 3}
@@ -16760,7 +16760,7 @@ MonoBehaviour:
   lowerArm: {fileID: 1465687913}
   train: {fileID: 1294777621}
   score: 0
-  evaluator: {fileID: 1113580511}
+  evaluator: {fileID: 1078603505}
   trainModifier: 10
   audioManager: {fileID: 383060464}
   uIManager: {fileID: 729434449}
@@ -21435,6 +21435,7 @@ MonoBehaviour:
   r_selfie: {fileID: 0}
   t_selfie: {fileID: 0}
   selfieEvaluation: 0
+  gmsk: {fileID: 0}
   endSelfieInterface: {fileID: 0}
   followers: {fileID: 0}
   debug: 0

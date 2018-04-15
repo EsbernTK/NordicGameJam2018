@@ -24,8 +24,7 @@ public class SelfieEvaluator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-	}
+    }
 
     bool displaySelfie = false;
 
@@ -33,10 +32,18 @@ public class SelfieEvaluator : MonoBehaviour {
     {
         if (takingSelfie)
         {
+            
             TakeSelfie(input);
             takingSelfie = false;
+            displaySelfie = true;
         }
-        Graphics.Blit(input, dest);
+        if (!displaySelfie)
+            Graphics.Blit(input, dest);
+        else
+        {
+            Debug.Log("doing the thing");
+            Graphics.Blit(r_selfie, dest);
+        }
     }
     //render
 
@@ -44,7 +51,6 @@ public class SelfieEvaluator : MonoBehaviour {
     public Texture2D t_selfie;
     void TakeSelfie(RenderTexture input)
     {
-        Debug.Log("Blitting Selfie");
         r_selfie = new RenderTexture(input);
         r_selfie.Create();
         Graphics.Blit(input, r_selfie);

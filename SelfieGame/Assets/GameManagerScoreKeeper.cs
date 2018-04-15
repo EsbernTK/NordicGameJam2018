@@ -58,6 +58,7 @@ public class GameManagerScoreKeeper : MonoBehaviour {
         float timer = 0f;
         while(timer < 1.2f)
         {
+
             yield return new WaitForSeconds(0.01f);
             timer += Time.deltaTime;
         }
