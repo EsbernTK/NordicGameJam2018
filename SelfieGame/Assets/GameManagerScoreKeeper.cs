@@ -20,7 +20,7 @@ public class GameManagerScoreKeeper : MonoBehaviour {
 	void Update () {
 		if(Time.time > trainTime)
         {
-
+            Debug.Log("DEAD");
         }
 	}
     public float calculateScore()
