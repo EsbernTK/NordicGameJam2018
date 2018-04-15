@@ -33,11 +33,10 @@ public class GameManagerScoreKeeper : MonoBehaviour {
             takingSelfie = true;
             upperArm.freeze = true;
             lowerArm.freeze = true;
-            
             StartCoroutine(takeSelfie());
             
         }
-		if(Time.time >= trainTime && !evaluator.takingSelfie && !dead)
+		if(Time.time >= trainTime - 0.5 && !evaluator.takingSelfie && !dead)
         {
             if(!dead)
                 audioManager.audioEffects[2].PlayEffect();
@@ -63,6 +62,7 @@ public class GameManagerScoreKeeper : MonoBehaviour {
             timer += Time.deltaTime;
         }
         train.GetComponent<TrainMover>().enabled = false;
+        
         
         evaluator.takingSelfie = true;
 
