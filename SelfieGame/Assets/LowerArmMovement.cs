@@ -16,6 +16,8 @@ public class LowerArmMovement : MonoBehaviour {
     Vector3 relYAxis;
     Vector3 relXAxis;
     Vector3 relZAxis;
+
+    public bool freeze;
     // Use this for initialization
     void Start()
     {
@@ -26,26 +28,35 @@ public class LowerArmMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        relYAxis = (childObject.transform.position - transform.position).normalized;
-        rotationAxis = relYAxis;
-        if (Input.GetKeyDown(yRightRotationActivationKey))
+        if (!freeze)
         {
-            body.AddTorque((relYAxis) * forceAmount, ForceMode.Impulse);
+            relYAxis = (childObject.transform.position - transform.position).normalized;
+            rotationAxis = relYAxis;
+            if (Input.GetKeyDown(yRightRotationActivationKey))
+            {
+                body.AddTorque((relYAxis) * forceAmount, ForceMode.Impulse);
+            }
+            if (Input.GetKeyDown(yLeftRotationActivationKey))
+            {
+                body.AddTorque((-relYAxis) * forceAmount, ForceMode.Impulse);
+            }
+            if (Input.GetKeyDown(xUpRotationActivationKey))
+            {
+                body.AddTorque((-parentTrans.up) * forceAmount, ForceMode.Impulse);
+                //body.AddTorque((-parentTrans.right) * forceAmount, ForceMode.Impulse);
+            }
+            if (Input.GetKeyDown(xDownRotationActivationKey))
+            {
+                body.AddTorque((parentTrans.up) * forceAmount, ForceMode.Impulse);
+                //body.AddTorque((parentTrans.right) * forceAmount, ForceMode.Impulse);
+            }
+            body.AddForce(new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f)), ForceMode.Impulse);
         }
-        if (Input.GetKeyDown(yLeftRotationActivationKey))
+        if (freeze)
         {
-            body.AddTorque((-relYAxis) * forceAmount, ForceMode.Impulse);
+            body.isKinematic = true;
+            body.useGravity = false;
+
         }
-        if (Input.GetKeyDown(xUpRotationActivationKey))
-        {
-            body.AddTorque((-parentTrans.up) * forceAmount, ForceMode.Impulse);
-            //body.AddTorque((-parentTrans.right) * forceAmount, ForceMode.Impulse);
-        }
-        if (Input.GetKeyDown(xDownRotationActivationKey))
-        {
-            body.AddTorque((parentTrans.up) * forceAmount, ForceMode.Impulse);
-            //body.AddTorque((parentTrans.right) * forceAmount, ForceMode.Impulse);
-        }
-        body.AddForce(new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f)),ForceMode.Impulse);
     }
 }

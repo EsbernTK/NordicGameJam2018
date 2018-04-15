@@ -9,6 +9,8 @@ public class UpperArmMovement : MonoBehaviour {
     public KeyCode xDownRotationActivationKey = KeyCode.S;
     public float forceAmount = 10;
     Rigidbody body;
+
+    public bool freeze;
     // Use this for initialization
     void Start()
     {
@@ -20,27 +22,35 @@ public class UpperArmMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (!freeze)
+        {
+            if (Input.GetKeyDown(yRightRotationActivationKey))
+            {
+                body.AddTorque((transform.right) * forceAmount, ForceMode.Impulse);
+                //body.AddTorque((transform.up) * forceAmount, ForceMode.Impulse);
+            }
+            if (Input.GetKeyDown(yLeftRotationActivationKey))
+            {
+                body.AddTorque((-transform.right) * forceAmount, ForceMode.Impulse);
+                //body.AddTorque((-transform.up) * forceAmount, ForceMode.Impulse);
+            }
+            if (Input.GetKeyDown(xUpRotationActivationKey))
+            {
+                body.AddTorque((-transform.up) * forceAmount, ForceMode.Impulse);
+                //body.AddTorque((-transform.right) * forceAmount, ForceMode.Impulse);
+            }
+            if (Input.GetKeyDown(xDownRotationActivationKey))
+            {
+                body.AddTorque((transform.up) * forceAmount, ForceMode.Impulse);
+                //body.AddTorque((transform.right) * forceAmount, ForceMode.Impulse);
+            }
+            body.AddForce(new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f)), ForceMode.Impulse);
+        }
+        if (freeze)
+        {
+            body.isKinematic = true;
+            body.useGravity = false;
 
-        if (Input.GetKeyDown(yRightRotationActivationKey))
-        {
-            body.AddTorque((transform.right) * forceAmount, ForceMode.Impulse);
-            //body.AddTorque((transform.up) * forceAmount, ForceMode.Impulse);
         }
-        if (Input.GetKeyDown(yLeftRotationActivationKey))
-        {
-            body.AddTorque((-transform.right) * forceAmount, ForceMode.Impulse);
-            //body.AddTorque((-transform.up) * forceAmount, ForceMode.Impulse);
-        }
-        if (Input.GetKeyDown(xUpRotationActivationKey))
-        {
-            body.AddTorque((-transform.up) * forceAmount, ForceMode.Impulse);
-            //body.AddTorque((-transform.right) * forceAmount, ForceMode.Impulse);
-        }
-        if (Input.GetKeyDown(xDownRotationActivationKey))
-        {
-            body.AddTorque((transform.up) * forceAmount, ForceMode.Impulse);
-            //body.AddTorque((transform.right) * forceAmount, ForceMode.Impulse);
-        }
-        body.AddForce(new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f)), ForceMode.Impulse);
     }
 }
