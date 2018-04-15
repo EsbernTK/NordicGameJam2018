@@ -22,6 +22,15 @@ public class AudioManager : MonoBehaviour {
     {
         foreach(AudioEffect sound in audioEffects)
         {
+            
+            sound.PlayEffect();
+        }
+    }
+    public void Update()
+    {
+        foreach (AudioEffect sound in audioEffects)
+        {
+
             sound.PlayEffect();
         }
     }
